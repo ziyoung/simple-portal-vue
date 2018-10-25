@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>选择一个链接</h2>
+    <div id="nav">
+      <ul>
+        <li>
+          <router-link to="/">回到首页</router-link>
+        </li>
+        <li>
+          <router-link to="/store-test">测试简单的 store</router-link>
+        </li>
+        <li>
+          <router-link to="/basic">portal 基本用法</router-link>
+        </li>
+        <li>
+          <router-link to="/multiple">portal multiple</router-link>
+        </li>
+        <li>
+          <router-link to="/scoped-slot">portal scoped slot</router-link>
+        </li>
+      </ul>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#nav {
+  border-bottom: 1px solid #eeeeee;
 }
 </style>
